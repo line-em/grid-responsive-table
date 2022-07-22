@@ -1,0 +1,47 @@
+.gridtable-row {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(70px, 1fr)) repeat(2, 2fr) 1fr 3fr;
+	border-bottom: 2px solid aliceblue;
+}
+
+.gridtable-row:first-child {
+	font-size: 1rem;
+	font-weight: bold;
+	border-bottom: 2px solid cornflowerblue;
+	background: whitesmoke;
+}
+
+.gridtable-cell {
+	padding: 0.4rem;
+}
+
+@media (max-width: 800px) {
+	.gridtable-row:first-child {
+		display: none;
+	}
+
+	.gridtable-row {
+		grid-template-columns: 1fr 1fr;
+		gap: 0.5rem;
+		margin-bottom: 2rem;
+	}
+
+	.gridtable-cell:nth-child(2) {
+		grid-column: span 2;
+	}
+
+	.gridtable-cell:last-child {
+		grid-column: span 3;
+	}
+
+	.gridtable-cell:before {
+		content: attr(data-title);
+		display: block;
+		font-weight: bold;
+		font-size: 1rem;
+		border-bottom: 2px solid cornflowerblue;
+		background: whitesmoke;
+		padding: 0.2rem;
+		margin-bottom: 0.4rem;
+	}
+}

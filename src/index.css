@@ -1,0 +1,85 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font: 400 0.8rem/1.7 "Nunito", Helvetica, sans-serif;
+	color: rgba(40, 36, 36, 0.87);
+	background-color: rgba(255, 255, 255, 0.87);
+}
+
+h1 {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+hr {
+	border: 0;
+	height: 1px;
+	background-color: rgba(40, 36, 36, 0.25);
+	margin: 1.5rem 0;
+}
+
+.app {
+	display: grid;
+	grid-template-columns: 15% 1fr;
+}
+
+.organization-info {
+	padding: 10px 20px;
+	border-right: 2px solid cornflowerblue;
+	height: 100vh;
+}
+
+.jobs-container {
+	padding: 10px 3%;
+}
+
+.job-info {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+}
+
+article > * + * {
+	margin-inline-start: 1rem;
+	margin-top: 10px;
+}
+
+.jobs-done {
+	display: inline-block;
+	background-color: cornflowerblue;
+	color: white;
+	padding: 0.5rem;
+	border-radius: 10px;
+}
+
+.pill {
+	width: fit-content;
+	background-color: mediumseagreen;
+	color: white;
+	border-radius: 10px;
+	padding: 0 0.3rem;
+}
+
+@media (max-width: 800px) {
+	.app {
+		grid-template-columns: 1fr;
+	}
+
+	.jobs-container {
+		padding: 10px;
+	}
+
+	.job-info {
+		justify-content: space-around;
+	}
+
+	.organization-info {
+		display: none;
+	}
+}
